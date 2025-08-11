@@ -223,7 +223,7 @@
 </div>
 
 <footer>
-  © ২০২৫ তোমার নাম. সর্বস্বত্ব সংরক্ষিত।
+  © ২০২৫ রাজিব. সর্বস্বত্ব সংরক্ষিত।
 </footer>
 
 <script>
@@ -338,7 +338,6 @@
     }
   ];
 
-  // Create each site card and append
   const siteList = document.getElementById('site-list');
 
   sites.forEach((site, idx) => {
@@ -357,14 +356,11 @@
       <button class="join-btn" aria-label="${site.name} এ জয়েন করুন">এখনই জয়েন করুন</button>
     `;
 
-    // Animation delay for stagger effect
     setTimeout(() => {
       card.classList.add('visible');
     }, idx * 220);
 
-    // Button click open link in new tab
-    const btn = card.querySelector('.join-btn');
-    btn.addEventListener('click', () => {
+    card.querySelector('.join-btn').addEventListener('click', () => {
       window.open(site.url, '_blank', 'noopener');
     });
 
